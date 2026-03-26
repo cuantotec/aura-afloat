@@ -1,36 +1,37 @@
 import { useEffect, useRef } from 'react';
+import { ArrowRightIcon, HandGrabbingIcon } from './Icons';
 import './ExperienceGallery.css';
 
 const photos = [
   {
-    src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=80&auto=format&fit=crop',
-    alt: 'Morning yoga session on yacht deck at sunrise',
+    src: '/yacht-sailing-sunrise.jpg',
+    alt: 'Luxury yacht sailing on crystal blue ocean at sunrise',
     caption: 'Morning Light',
     sub: 'Sunrise · Reformer Flow · 75 min',
   },
   {
-    src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop',
-    alt: 'Woman doing yoga on boat deck at golden hour',
+    src: '/yacht-yoga-sunset.jpg',
+    alt: 'Woman doing yoga on yacht deck at golden hour sunset',
     caption: 'Sunset Flow',
     sub: 'Golden Hour · Breathwork · 60 min',
   },
   {
-    src: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=900&q=80&auto=format&fit=crop',
-    alt: 'Group wellness retreat on yacht deck',
-    caption: 'The Celebration',
-    sub: 'Private Group · 90 min · Champagne Toast',
+    src: '/yacht-pilates-group.jpg',
+    alt: 'Pilates class on yacht deck with Miami skyline',
+    caption: 'The Flow',
+    sub: 'Private · Pilates · 60 min',
   },
   {
-    src: 'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=900&q=80&auto=format&fit=crop',
-    alt: 'Calm ocean view from yacht at Biscayne Bay',
-    caption: 'The Bay at Dawn',
-    sub: 'Biscayne Bay · Open Water · Stillness',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=80&auto=format&fit=crop',
-    alt: 'Luxury yacht interior with ocean view',
+    src: '/yacht-interior-1.jpg',
+    alt: 'Luxury yacht interior salon with ocean view',
     caption: 'Inner Calm',
     sub: 'Meditation · Breathwork · 45 min',
+  },
+  {
+    src: '/yacht-meditation.jpg',
+    alt: 'Woman meditating on yacht deck at sunrise',
+    caption: 'Open Waters',
+    sub: 'Private · Sailing · Stillness',
   },
 ];
 
@@ -148,11 +149,11 @@ export default function ExperienceGallery() {
 
       <div className="container experience-gallery__footer reveal">
         <p className="experience-gallery__note">
-          <i className="ph ph-hand-grabbing" />
+          <HandGrabbingIcon size={18} />
           Drag to explore
         </p>
         <button className="btn-primary" onClick={scrollToWaitlist}>
-          <i className="ph ph-arrow-right" />
+          <ArrowRightIcon size={16} />
           Reserve Your Session
         </button>
       </div>

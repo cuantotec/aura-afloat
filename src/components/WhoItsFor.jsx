@@ -1,19 +1,20 @@
 import { useEffect, useRef } from 'react';
+import { StarFourIcon, ChampagneIcon, BuildingsIcon } from './Icons';
 import './WhoItsFor.css';
 
 const personas = [
   {
-    icon: 'ph-star-four',
+    Icon: StarFourIcon,
     title: 'Luxury Seekers',
     desc: 'Women who invest in elevated wellness experiences that restore rather than deplete.',
   },
   {
-    icon: 'ph-champagne',
+    Icon: ChampagneIcon,
     title: 'Bachelorette Groups',
     desc: 'Celebrate your tribe on the water — movement, mimosas, and memories that last a lifetime.',
   },
   {
-    icon: 'ph-buildings',
+    Icon: BuildingsIcon,
     title: 'Corporate Retreats',
     desc: 'Reward your team with a unique wellness experience that blends connection and calm.',
   },
@@ -65,7 +66,7 @@ export default function WhoItsFor() {
             {personas.map((p, i) => (
               <div className="who-its-for__card reveal" key={i}>
                 <div className="who-its-for__card-icon">
-                  <i className={`ph ${p.icon}`} />
+                  <p.Icon size={22} />
                 </div>
                 <div className="who-its-for__card-body">
                   <h4 className="who-its-for__card-title">{p.title}</h4>

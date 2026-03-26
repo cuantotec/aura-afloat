@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { AnchorIcon, ArrowRightIcon, ArrowDownIcon, CaretDoubleDownIcon } from './Icons';
 import './Hero.css';
 
 export default function Hero() {
@@ -22,6 +23,10 @@ export default function Hero() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const scrollToWhatItIs = () => {
+    document.getElementById('what-it-is')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const scrollToWaitlist = () => {
     document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
@@ -62,13 +67,13 @@ export default function Hero() {
 
         <div className="hero__actions">
           <button className="hero__cta btn-accent" onClick={scrollToWaitlist}>
-            <i className="ph ph-anchor" />
+            <AnchorIcon size={18} />
             Reserve Your Session
           </button>
-          <a href="#what-it-is" className="hero__link">
+          <button className="hero__link" onClick={scrollToWhatItIs}>
             Discover More
-            <i className="ph ph-arrow-down" />
-          </a>
+            <ArrowRightIcon size={16} />
+          </button>
         </div>
       </div>
 
@@ -79,7 +84,7 @@ export default function Hero() {
         aria-label="Scroll down"
       >
         <div className="hero__scroll-line" />
-        <i className="ph ph-caret-double-down" />
+        <CaretDoubleDownIcon size={18} />
       </button>
 
       {/* Bottom fade */}

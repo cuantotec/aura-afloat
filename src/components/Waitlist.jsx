@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { SparkleIcon, PaperPlaneTiltIcon } from './Icons';
 import './Waitlist.css';
 
 export default function Waitlist() {
@@ -80,7 +81,7 @@ export default function Waitlist() {
                 'Priority session times',
               ].map((perk, i) => (
                 <div className="waitlist__perk" key={i}>
-                  <i className="ph ph-sparkle" />
+                  <SparkleIcon size={16} />
                   <span>{perk}</span>
                 </div>
               ))}
@@ -91,7 +92,7 @@ export default function Waitlist() {
             {status === 'success' ? (
               <div className="waitlist__success">
                 <div className="waitlist__success-icon">
-                  <i className="ph ph-paper-plane-tilt" />
+                  <PaperPlaneTiltIcon size={32} />
                 </div>
                 <h3>You're on the list.</h3>
                 <p>We'll reach out when Aura Afloat launches. Until then — stay wavy.</p>
@@ -129,7 +130,7 @@ export default function Waitlist() {
                       </>
                     ) : (
                       <>
-                        <i className="ph ph-paper-plane-tilt" />
+                        <PaperPlaneTiltIcon size={16} />
                         Join Waitlist
                       </>
                     )}

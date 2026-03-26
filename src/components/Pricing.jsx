@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { CheckCircleIcon, PaperPlaneTiltIcon } from './Icons';
 import './Pricing.css';
 
 const tiers = [
@@ -106,7 +107,7 @@ export default function Pricing() {
               <ul className="pricing__features">
                 {tier.features.map((f, j) => (
                   <li key={j}>
-                    <i className="ph ph-check-circle" />
+                    <CheckCircleIcon size={16} />
                     {f}
                   </li>
                 ))}
@@ -116,7 +117,7 @@ export default function Pricing() {
                 className={`pricing__cta ${tier.popular ? 'btn-accent' : 'btn-outline'}`}
                 onClick={scrollToWaitlist}
               >
-                <i className="ph ph-paper-plane-tilt" />
+                <PaperPlaneTiltIcon size={16} />
                 {tier.cta}
               </button>
             </div>

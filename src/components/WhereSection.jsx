@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { MapPinIcon, ClockIcon, WavesIcon, SunHorizonIcon } from './Icons';
+import MapEmbed from './MapEmbed';
 import './WhereSection.css';
 
 export default function WhereSection() {
@@ -24,20 +26,35 @@ export default function WhereSection() {
       <div className="container">
         <div className="where-section__inner">
           <div className="where-section__visual reveal-left">
-            <div className="where-section__img-frame">
+            <a
+              href="https://maps.app.goo.gl/9Ft3iZ4j1xygTxsh6?g_st=ic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="where-section__img-frame"
+              style={{ display: 'block', padding: 0, borderRadius: '16px', overflow: 'hidden', position: 'relative' }}
+            >
               <img
-                src="https://images.unsplash.com/photo-1569413503773-3f40b13a8f78?w=900&q=80&auto=format&fit=crop"
-                alt="Biscayne Bay Miami aerial view"
-                loading="lazy"
-                decoding="async"
+                src="/miamarina.jpg"
+                alt="MiaMarina aerial view"
+                style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }}
               />
-            </div>
-            <div className="where-section__pin">
-              <i className="ph ph-map-pin" />
-              <span>Biscayne Bay, Miami</span>
-            </div>
+              <div style={{
+                position: 'absolute', inset: 0,
+                background: 'linear-gradient(135deg, rgba(26,26,46,0.3) 0%, transparent 60%)',
+                pointerEvents: 'none'
+              }} />
+              <div style={{
+                position: 'absolute', bottom: 0, left: 0, right: 0,
+                background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)',
+                padding: '20px',
+                display: 'flex', alignItems: 'center', gap: '8px'
+              }}>
+                <MapPinIcon size={18} color="#C9A96E" />
+                <span style={{ color: '#fff', fontSize: '14px', fontWeight: 500 }}>View on Google Maps</span>
+              </div>
+            </a>
             <div className="where-section__badge">
-              <i className="ph ph-sun-horizon" />
+              <SunHorizonIcon size={16} />
               <span>Morning & Sunset Sessions</span>
             </div>
           </div>
@@ -46,11 +63,11 @@ export default function WhereSection() {
             <span className="section-eyebrow">Where</span>
             <h2 className="where-section__title">
               Departing from<br />
-              <em>Biscayne Bay, Miami</em>
+              <em>MiaMarina, Key Biscayne</em>
             </h2>
             <div className="section-divider" style={{ margin: '0' }} />
             <p className="where-section__desc">
-              Your session begins at a private marina minutes from South Beach.
+              Your session begins at MiaMarina — a private yacht club minutes from Key Biscayne.
               Once aboard, we anchor in the calm, protected waters of Biscayne Bay —
               away from the crowds, surrounded by sky and sea.
             </p>
@@ -58,16 +75,16 @@ export default function WhereSection() {
             <div className="where-section__details">
               <div className="where-section__detail">
                 <div className="where-section__detail-icon">
-                  <i className="ph ph-map-pin" />
+                  <MapPinIcon size={18} />
                 </div>
                 <div>
-                  <strong>Marina Location</strong>
-                  <span>Biscayne Bay Waterway, Miami, FL</span>
+                  <strong>MiaMarina</strong>
+                  <span>Key Biscayne, FL</span>
                 </div>
               </div>
               <div className="where-section__detail">
                 <div className="where-section__detail-icon">
-                  <i className="ph ph-clock" />
+                  <ClockIcon size={18} />
                 </div>
                 <div>
                   <strong>15 Minutes</strong>
@@ -76,7 +93,7 @@ export default function WhereSection() {
               </div>
               <div className="where-section__detail">
                 <div className="where-section__detail-icon">
-                  <i className="ph ph-waves" />
+                  <WavesIcon size={18} />
                 </div>
                 <div>
                   <strong>Protected Waters</strong>

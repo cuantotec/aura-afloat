@@ -1,19 +1,20 @@
 import { useEffect, useRef } from 'react';
+import { AnchorSimpleIcon, FloatIcon, WaterIcon } from './Icons';
 import './WhatItIs.css';
 
 const features = [
   {
-    icon: 'ph-anchor-simple',
+    Icon: AnchorSimpleIcon,
     title: 'The Setting',
     desc: '60–90 minute private session aboard a fully-equipped yacht, anchored in the calm waters of Biscayne Bay. Sun, salt air, and open sky — nature\'s finest studio.',
   },
   {
-    icon: 'ph-float',
+    Icon: FloatIcon,
     title: 'The Practice',
     desc: 'Reformer-inspired Pilates flows adapted for the water, paired with intentional breathwork. The gentle rock of the yacht becomes part of the practice.',
   },
   {
-    icon: 'ph-water',
+    Icon: WaterIcon,
     title: 'The Sea',
     desc: 'Salt air, horizon lines, and the rhythmic motion of open water. Not just a backdrop — an active participant in your restoration.',
   },
@@ -54,7 +55,7 @@ export default function WhatItIs() {
             <div className={`what-it-is__card reveal reveal-${i % 2 === 0 ? 'left' : 'right'}`} key={i}>
               <div className="what-it-is__card-inner">
                 <div className="what-it-is__icon">
-                  <i className={`ph ${f.icon}`} />
+                  <f.Icon size={24} />
                 </div>
                 <div className="what-it-is__card-content">
                   <h3 className="what-it-is__card-title">{f.title}</h3>

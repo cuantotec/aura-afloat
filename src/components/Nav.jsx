@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { AnchorIcon, LogoMarkIcon } from './Icons';
 import './Nav.css';
 
 export default function Nav() {
@@ -13,13 +14,19 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (id) => (e) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setMenuOpen(false);
   };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setMenuOpen(false);
+  };
+
+  const scrollToWaitlist = () => {
+    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
     setMenuOpen(false);
   };
 
@@ -29,10 +36,7 @@ export default function Nav() {
         <button className="nav__logo" onClick={scrollToTop}>
           <span className="nav__logo-text">Aura Afloat</span>
           <span className="nav__logo-mark">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 18 L12 6 L21 18 Z" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
+            <LogoMarkIcon />
           </span>
         </button>
 
@@ -45,8 +49,12 @@ export default function Nav() {
         </button>
 
         <div className={`nav__links ${menuOpen ? 'nav__links--open' : ''}`}>
+          <a href="#what-it-is" className="nav__link" onClick={scrollTo('what-it-is')}>What Awaits</a>
+          <a href="#experience" className="nav__link" onClick={scrollTo('experience')}>Experience</a>
+          <a href="#where" className="nav__link" onClick={scrollTo('where')}>Where</a>
+          <a href="#pricing" className="nav__link" onClick={scrollTo('pricing')}>Pricing</a>
           <button className="nav__cta btn-accent" onClick={scrollToWaitlist}>
-            <i className="ph ph-anchor" />
+            <AnchorIcon size={16} />
             Book a Session
           </button>
         </div>

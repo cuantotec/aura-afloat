@@ -1,3 +1,4 @@
+import { InstagramLogo, Envelope } from '@phosphor-icons/react';
 import './Footer.css';
 
 export default function Footer() {
@@ -42,10 +43,10 @@ export default function Footer() {
               <div className="footer__links-col">
                 <span className="footer__links-title">Connect</span>
                 <a href="https://instagram.com/auraafloat" target="_blank" rel="noopener noreferrer" className="footer__link">
-                  <i className="ph ph-instagram-logo" /> Instagram
+                  <InstagramLogo size={16} /> Instagram
                 </a>
                 <a href="mailto:hello@auraafloat.com" className="footer__link">
-                  <i className="ph ph-envelope" /> Email Us
+                  <Envelope size={16} /> Email Us
                 </a>
               </div>
             </div>
