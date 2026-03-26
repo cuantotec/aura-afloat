@@ -1,0 +1,17 @@
+/* --- WaveDivider Styles --- */
+.wave-divider {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: clamp(36px, 5vw, 72px);
+  display: block;
+}
+
+.wave-divider--flip {
+  transform: scaleX(-1);
+}

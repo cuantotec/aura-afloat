@@ -1,0 +1,193 @@
+/* --- WhoItsFor Styles --- */
+.who-its-for {
+  padding: var(--section-padding) 0;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle geometric pattern background */
+.who-its-for__bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image:
+    radial-gradient(circle at 20% 50%, var(--accent) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, var(--accent) 1px, transparent 1px),
+    radial-gradient(circle at 60% 80%, var(--accent) 1px, transparent 1px);
+  background-size: 80px 80px, 120px 120px, 60px 60px;
+  pointer-events: none;
+}
+
+.who-its-for__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.who-its-for__left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: 20px;
+}
+
+.who-its-for__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--primary);
+  line-height: 1.3;
+  position: relative;
+  padding-left: 36px;
+}
+
+.who-its-for__quote em {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.who-its-for__quote-mark {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+  font-style: normal;
+}
+
+.who-its-for__rule {
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-left: 36px;
+}
+
+.who-its-for__body {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-light);
+  padding-left: 36px;
+  max-width: 440px;
+}
+
+.who-its-for__signature {
+  padding-left: 36px;
+  margin-top: 8px;
+}
+
+.who-its-for__sig-text {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+.who-its-for__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.who-its-for__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 32px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.who-its-for__card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition);
+}
+
+.who-its-for__card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow);
+  border-color: rgba(201, 169, 110, 0.15);
+}
+
+.who-its-for__card:hover::before {
+  transform: scaleY(1);
+}
+
+.who-its-for__card-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(201, 169, 110, 0.12), rgba(201, 169, 110, 0.04));
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.5rem;
+  transition: transform var(--transition);
+}
+
+.who-its-for__card:hover .who-its-for__card-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.who-its-for__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.who-its-for__card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.who-its-for__card-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-light);
+}
+
+@media (max-width: 960px) {
+  .who-its-for__inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .who-its-for__body {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .who-its-for__rule {
+    margin-left: 0;
+  }
+
+  .who-its-for__signature {
+    padding-left: 0;
+  }
+}

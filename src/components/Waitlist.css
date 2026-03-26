@@ -1,0 +1,261 @@
+/* --- Waitlist Styles --- */
+.waitlist {
+  padding: var(--section-padding) 0;
+  background: var(--primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+.waitlist__deco {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.waitlist__deco--1 {
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(61, 122, 124, 0.15) 0%, transparent 70%);
+}
+
+.waitlist__deco--2 {
+  bottom: -120px;
+  left: -120px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+}
+
+.waitlist__deco--3 {
+  top: 50%;
+  left: 40%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+}
+
+.waitlist__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.waitlist__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.waitlist__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.waitlist__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.waitlist__title em {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+}
+
+.waitlist__rule {
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.waitlist__sub {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 400px;
+}
+
+.waitlist__perks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.waitlist__perk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+.waitlist__perk i {
+  color: var(--accent);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Form */
+.waitlist__form-wrap {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  backdrop-filter: blur(8px);
+}
+
+.waitlist__form-header {
+  margin-bottom: 28px;
+}
+
+.waitlist__form-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.waitlist__form-sub {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+}
+
+.waitlist__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.waitlist__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.waitlist__input {
+  width: 100%;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.waitlist__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.waitlist__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.waitlist__input--error {
+  border-color: rgba(220, 100, 100, 0.7);
+}
+
+.waitlist__input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.waitlist__error {
+  font-size: 0.82rem;
+  color: rgba(255, 160, 160, 0.9);
+}
+
+.waitlist__submit {
+  width: 100%;
+  justify-content: center;
+  padding: 18px 32px;
+  font-size: 0.85rem;
+}
+
+.waitlist__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.waitlist__spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.waitlist__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.waitlist__success-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(201, 169, 110, 0.25), rgba(201, 169, 110, 0.1));
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+
+.waitlist__success h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.waitlist__success p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 280px;
+}
+
+@media (max-width: 900px) {
+  .waitlist__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .waitlist__form-wrap {
+    padding: 36px 28px;
+  }
+}
