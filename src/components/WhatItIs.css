@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--secondary);
   font-size: 2rem;
   transition: transform var(--transition), background var(--transition);
 }
@@ -122,7 +122,7 @@
 .what-it-is__card-desc {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: var(--text-light);
+  color: var(--text);
 }
 
 @media (max-width: 900px) {
