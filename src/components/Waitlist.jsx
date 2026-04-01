@@ -81,7 +81,7 @@ export default function Waitlist() {
                 'Priority session times',
               ].map((perk, i) => (
                 <div className="waitlist__perk" key={i}>
-                  <SparkleIcon size={16} />
+                  <SparkleIcon size={16} color="var(--accent)" />
                   <span>{perk}</span>
                 </div>
               ))}
@@ -130,7 +130,7 @@ export default function Waitlist() {
                       </>
                     ) : (
                       <>
-                        <PaperPlaneTiltIcon size={16} />
+                        <PaperPlaneTiltIcon size={16} color="var(--primary)" />
                         Join Waitlist
                       </>
                     )}

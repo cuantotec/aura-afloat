@@ -8,6 +8,7 @@ const tiers = [
     price: '250',
     unit: '/person',
     badge: null,
+    iconColor: 'var(--secondary)',
     desc: 'A completely private session for one. All you, all sea, all calm.',
     features: [
       '60–90 min private session',
@@ -23,6 +24,7 @@ const tiers = [
     price: '200',
     unit: '/person',
     badge: 'Most Popular',
+    iconColor: 'var(--accent)',
     desc: 'Share the experience with a friend, partner, or loved one.',
     features: [
       '60–90 min private session',
@@ -40,6 +42,7 @@ const tiers = [
     price: '175',
     unit: '/person',
     badge: null,
+    iconColor: 'var(--secondary)',
     desc: 'Bachelorette parties, corporate retreats, or a celebration with your circle.',
     features: [
       '90 min private session',
@@ -107,7 +110,7 @@ export default function Pricing() {
               <ul className="pricing__features">
                 {tier.features.map((f, j) => (
                   <li key={j}>
-                    <CheckCircleIcon size={16} />
+                    <CheckCircleIcon size={16} color={tier.iconColor} />
                     {f}
                   </li>
                 ))}

@@ -49,10 +49,10 @@ export default function Nav() {
         </button>
 
         <div className={`nav__links ${menuOpen ? 'nav__links--open' : ''}`}>
-          <a href="#what-it-is" className="nav__link" onClick={scrollTo('what-it-is')}>What Awaits</a>
-          <a href="#experience" className="nav__link" onClick={scrollTo('experience')}>Experience</a>
-          <a href="#where" className="nav__link" onClick={scrollTo('where')}>Where</a>
-          <a href="#pricing" className="nav__link" onClick={scrollTo('pricing')}>Pricing</a>
+          <a href="#" className="nav__link" onClick={scrollTo('what-it-is')}>What Awaits</a>
+          <a href="#" className="nav__link" onClick={scrollTo('experience')}>Experience</a>
+          <a href="#" className="nav__link" onClick={scrollTo('where')}>Where</a>
+          <a href="#" className="nav__link" onClick={scrollTo('pricing')}>Pricing</a>
           <button className="nav__cta btn-accent" onClick={scrollToWaitlist}>
             <AnchorIcon size={16} />
             Book a Session

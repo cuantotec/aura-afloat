@@ -7,7 +7,7 @@ export default function Footer() {
       {/* Decorative wave top */}
       <div className="footer__wave" aria-hidden="true">
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z" fill="#0B1F2E" />
+          <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z" fill="#060F18" />
         </svg>
       </div>
 
