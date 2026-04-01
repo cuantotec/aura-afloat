@@ -88,8 +88,7 @@
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-style: italic;
-  color: var(--accent);
-  opacity: 0.7;
+  color: var(--text);
 }
 
 .who-its-for__right {
@@ -169,7 +168,7 @@
 .who-its-for__card-desc {
   font-size: 0.9rem;
   line-height: 1.65;
-  color: var(--text-light);
+  color: var(--text);
 }
 
 @media (max-width: 960px) {

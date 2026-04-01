@@ -30,7 +30,7 @@
 
 .pricing__sub {
   font-size: 1rem;
-  color: var(--text-light);
+  color: var(--text);
   max-width: 480px;
 }
 
@@ -117,7 +117,7 @@
 .pricing__currency {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--text);
   font-weight: 400;
 }
 
@@ -134,6 +134,10 @@
   color: #fff;
 }
 
+.pricing__card--popular .pricing__currency {
+  color: var(--accent);
+}
+
 .pricing__unit {
   font-size: 0.85rem;
   color: var(--muted);
@@ -147,7 +151,7 @@
 .pricing__desc {
   font-size: 0.9rem;
   line-height: 1.65;
-  color: var(--text-light);
+  color: var(--text);
   font-weight: 300;
 }
 
@@ -178,7 +182,7 @@
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--text);
   font-weight: 300;
 }
 
