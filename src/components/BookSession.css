@@ -1,0 +1,120 @@
+/* --- BookSession Styles --- */
+.book-session {
+  padding: var(--section-padding) 0;
+  background: var(--primary);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Decorative circles */
+.book-session__deco {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.book-session__deco--1 {
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+}
+
+.book-session__deco--2 {
+  top: 20%;
+  left: -120px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(61, 122, 124, 0.1) 0%, transparent 70%);
+}
+
+.book-session__deco--3 {
+  bottom: 10%;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
+}
+
+.book-session__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.book-session__icon-wrap {
+  width: 80px;
+  height: 80px;
+  background: rgba(201, 169, 110, 0.1);
+  border: 1.5px solid rgba(201, 169, 110, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.book-session__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0;
+}
+
+.book-session__handle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.book-session__handle-link {
+  color: inherit;
+  transition: color var(--transition);
+}
+
+.book-session__handle-link:hover {
+  color: var(--accent);
+}
+
+.book-session__text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 400px;
+  font-weight: 300;
+}
+
+.book-session__cta {
+  margin-top: 8px;
+  gap: 10px;
+  padding: 18px 40px;
+  font-size: 0.88rem;
+}
+
+.book-session__rule {
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-top: 8px;
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  .book-session__icon-wrap {
+    width: 64px;
+    height: 64px;
+  }
+}

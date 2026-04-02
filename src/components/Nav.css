@@ -155,29 +155,16 @@
     display: flex;
   }
 
-  /* Mobile menu — always cream background, dark text when open */
-  .nav__links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: min(320px, 85vw);
-    height: 100vh;
-    background: rgba(250, 248, 245, 0.97);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    transition: right 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: -8px 0 48px rgba(11, 31, 46, 0.1);
-    padding: 40px;
+  /* Mobile: white navbar background even before scroll */
+  .nav {
+    background-color: rgba(250, 248, 245, 0.96);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    box-shadow: 0 1px 0 rgba(11, 31, 46, 0.08), 0 4px 24px rgba(11, 31, 46, 0.06);
+    padding: 14px 0;
   }
 
-  .nav__links--open {
-    right: 0;
-  }
-
-  /* Dark logo + dark links inside mobile menu */
+  /* Logo + links dark on white mobile nav */
   .nav__logo {
     color: var(--primary) !important;
   }
@@ -191,8 +178,35 @@
     color: var(--accent) !important;
   }
 
-  /* Hamburger always dark when menu is open */
+  /* Hamburger spans dark on white navbar */
   .nav__hamburger span {
+    background: var(--primary) !important;
+  }
+
+  /* Mobile menu drawer — slides in from right */
+  .nav__links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(320px, 85vw);
+    height: 100vh;
+    background: rgba(250, 248, 245, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+    transition: right 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: -8px 0 48px rgba(11, 31, 46, 0.12);
+    padding: 60px 40px;
+  }
+
+  .nav__links--open {
+    right: 0;
+  }
+
+  /* X button visible: white X on the mobile menu drawer */
+  .nav__hamburger--open span {
     background: var(--primary) !important;
   }
 }

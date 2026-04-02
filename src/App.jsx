@@ -7,6 +7,7 @@ import ExperienceGallery from './components/ExperienceGallery';
 import WhereSection from './components/WhereSection';
 import Pricing from './components/Pricing';
 import Waitlist from './components/Waitlist';
+import BookSession from './components/BookSession';
 import Footer from './components/Footer';
 import './styles/global.css';
 
@@ -27,6 +28,8 @@ export default function App() {
         <Pricing />
         <WaveDivider variant="ivory" />
         <Waitlist />
+        <WaveDivider variant="navy" />
+        <BookSession />
       </main>
       <Footer />
     </>
