@@ -19,7 +19,7 @@ const photos = [
     src: '/yacht-pilates-group.jpg',
     alt: 'Pilates class on yacht deck with Miami skyline',
     caption: 'The Flow',
-    sub: 'Private · Pilates · 60 min',
+    sub: 'Pilates · 60 min',
   },
   {
     src: '/yacht-interior-1.jpg',
@@ -31,7 +31,7 @@ const photos = [
     src: '/yacht-meditation.jpg',
     alt: 'Woman meditating on yacht deck at sunrise',
     caption: 'Open Waters',
-    sub: 'Private · Sailing · Stillness',
+    sub: 'Sailing · Stillness',
   },
 ];
 

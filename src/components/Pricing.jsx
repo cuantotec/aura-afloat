@@ -11,7 +11,7 @@ const tiers = [
     iconColor: 'var(--secondary)',
     desc: 'A single session on the water. Just you and the sea.',
     features: [
-      '90 min private session',
+      '90 min session',
       'Reformer-inspired Pilates',
       'Breathwork integration',
       'Yacht charter included',
@@ -27,7 +27,7 @@ const tiers = [
     iconColor: 'var(--accent)',
     desc: 'Your monthly escape on the water. One session every month.',
     features: [
-      '90 min private session',
+      '90 min session',
       'Reformer-inspired Pilates',
       'Breathwork integration',
       'Yacht charter included',
@@ -45,7 +45,7 @@ const tiers = [
     iconColor: 'var(--secondary)',
     desc: 'Twice a month on the water. For those who want more.',
     features: [
-      '90 min private session × 2/month',
+      '90 min session × 2/month',
       'Reformer-inspired Pilates',
       'Breathwork integration',
       'Yacht charter included',

@@ -24,7 +24,7 @@ export default function Footer() {
                   </svg>
                 </div>
               </div>
-              <p className="footer__tagline">Private Pilates on Biscayne Bay, Miami</p>
+              <p className="footer__tagline">Pilates on Biscayne Bay, Miami</p>
             </div>
 
             <div className="footer__links">

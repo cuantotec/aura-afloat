@@ -61,7 +61,7 @@ export default function Hero() {
         <div className="hero__rule" />
 
         <p className="hero__sub">
-          Private Pilates sessions aboard a luxury yacht.<br />
+          Pilates sessions aboard a luxury yacht.<br />
           The sea, the breeze, and the movement — all to yourself.
         </p>
 

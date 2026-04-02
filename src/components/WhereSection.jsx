@@ -67,7 +67,7 @@ export default function WhereSection() {
             </h2>
             <div className="section-divider" style={{ margin: '0' }} />
             <p className="where-section__desc">
-              Your session begins at MiaMarina — a private yacht club minutes from Key Biscayne.
+              Your session begins at MiaMarina — a yacht club minutes from Key Biscayne.
               Once aboard, we anchor in the calm, protected waters of Biscayne Bay —
               away from the crowds, surrounded by sky and sea.
             </p>

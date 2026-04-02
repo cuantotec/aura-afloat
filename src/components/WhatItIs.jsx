@@ -6,7 +6,7 @@ const features = [
   {
     Icon: AnchorSimpleIcon,
     title: 'The Setting',
-    desc: '60–90 minute private session aboard a fully-equipped yacht, anchored in the calm waters of Biscayne Bay. Sun, salt air, and open sky — nature\'s finest studio.',
+    desc: '60–90 minute session aboard a fully-equipped yacht, anchored in the calm waters of Biscayne Bay. Sun, salt air, and open sky — nature\'s finest studio.',
   },
   {
     Icon: FloatIcon,
