@@ -1,4 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <circle cx="16" cy="16" r="16" fill="#1B3A4B"/>
-  <text x="16" y="22" font-family="Georgia, serif" font-size="18" fill="#C8956C" text-anchor="middle" font-style="italic">A</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Minimalist sailboat icon in gold -->
+  <rect width="32" height="32" rx="6" fill="#0B1F2E"/>
+  <!-- Wave base -->
+  <path d="M4 22 Q8 19 12 22 Q16 25 20 22 Q24 19 28 22 L28 24 Q24 21 20 24 Q16 27 12 24 Q8 21 4 24 Z" fill="#C9A96E" opacity="0.8"/>
+  <!-- Sail -->
+  <path d="M16 8 L16 22" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Left sail -->
+  <path d="M16 8 Q12 14 16 20" fill="#C9A96E" opacity="0.9"/>
+  <!-- Right sail -->
+  <path d="M16 10 Q20 15 16 20" fill="#C9A96E" opacity="0.7"/>
+  <!-- Hull -->
+  <path d="M10 22 Q16 25 22 22 L21 24 Q16 26 11 24 Z" fill="#C9A96E"/>
 </svg>
