@@ -9,15 +9,15 @@ const tiers = [
     unit: '/person',
     badge: null,
     iconColor: 'var(--secondary)',
-    desc: 'A completely private session for one. All you, all sea, all calm.',
+    desc: 'A personal session just for you. All you, all sea, all calm.',
     features: [
-      '60–90 min private session',
+      '60–90 min personal session',
       'Reformer-inspired Pilates',
       'Breathwork integration',
       'Yacht charter included',
       'Welcome beverage',
     ],
-    cta: 'Join Waitlist',
+    cta: 'Book Now',
   },
   {
     name: 'Duo',
@@ -27,32 +27,32 @@ const tiers = [
     iconColor: 'var(--accent)',
     desc: 'Share the experience with a friend, partner, or loved one.',
     features: [
-      '60–90 min private session',
+      '60–90 min shared session',
       'Reformer-inspired Pilates',
       'Breathwork integration',
       'Yacht charter included',
       'Welcome beverage',
       'Min. 2 guests',
     ],
-    cta: 'Join Waitlist',
+    cta: 'Book Now',
     popular: true,
   },
   {
-    name: 'Private Group',
+    name: 'Group',
     price: '175',
     unit: '/person',
     badge: null,
     iconColor: 'var(--secondary)',
     desc: 'Bachelorette parties, corporate retreats, or a celebration with your circle.',
     features: [
-      '90 min private session',
+      '90 min group session',
       'Reformer-inspired Pilates',
       'Breathwork integration',
       'Yacht charter included',
       'Champagne & light bites',
       'Min. 6 guests',
     ],
-    cta: 'Join Waitlist',
+    cta: 'Book Now',
   },
 ];
 
@@ -74,8 +74,8 @@ export default function Pricing() {
     return () => observer.disconnect();
   }, []);
 
-  const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBookSession = () => {
+    document.getElementById('book-session')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -118,7 +118,7 @@ export default function Pricing() {
 
               <button
                 className={`pricing__cta ${tier.popular ? 'btn-accent' : 'btn-outline'}`}
-                onClick={scrollToWaitlist}
+                onClick={scrollToBookSession}
               >
                 <PaperPlaneTiltIcon size={16} />
                 {tier.cta}
