@@ -38,8 +38,8 @@ export default function Nav() {
     closeMenu();
   };
 
-  const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBookSession = () => {
+    document.getElementById('book-session')?.scrollIntoView({ behavior: 'smooth' });
     closeMenu();
   };
 
@@ -54,9 +54,10 @@ export default function Nav() {
 
       <nav className={`nav ${scrolled ? 'nav--solid' : ''}`}>
         <div className="nav__inner container">
-          {/* Logo */}
+          {/* Logo + Brand Name */}
           <button className="nav__logo" onClick={scrollToTop} aria-label="Aura Afloat — home">
             <Logo size={36} />
+            <span className="nav__brand">Aura Afloat</span>
           </button>
 
           {/* Hamburger */}
@@ -90,7 +91,7 @@ export default function Nav() {
             <a href="#" className="nav__link" onClick={scrollTo('experience')}>Experience</a>
             <a href="#" className="nav__link" onClick={scrollTo('where')}>Where</a>
             <a href="#" className="nav__link" onClick={scrollTo('pricing')}>Pricing</a>
-            <button className="nav__cta btn-accent" onClick={scrollToWaitlist}>
+            <button className="nav__cta btn-accent" onClick={scrollToBookSession}>
               <AnchorIcon size={16} />
               Book a Session
             </button>
