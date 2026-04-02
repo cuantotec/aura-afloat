@@ -117,7 +117,7 @@
   box-shadow: 0 6px 24px rgba(201, 169, 110, 0.3);
 }
 
-/* Hamburger */
+/* Hamburger — hidden on desktop */
 .nav__hamburger {
   display: none;
   flex-direction: column;
@@ -126,6 +126,14 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+/* Desktop: ensure hamburger and close button stay hidden */
+@media (min-width: 769px) {
+  .nav__hamburger,
+  .nav__close {
+    display: none;
+  }
 }
 
 .nav__hamburger span {
