@@ -28,7 +28,7 @@ export default function App() {
         <Pricing />
         <WaveDivider variant="ivory" />
         <Waitlist />
-        <WaveDivider variant="navy" />
+        <WaveDivider variant="ivory" />
         <BookSession />
       </main>
       <Footer />
